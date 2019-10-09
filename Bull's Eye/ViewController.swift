@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     var currentValue: Int = 0
     var targetValue = 0
+    @IBOutlet weak var targetLabel: UILabel!
     
     @IBOutlet weak var slider: UISlider!
     
@@ -20,8 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        currentValue = lroundf(slider.value)
-        targetValue = Int.random(in: 1...100)
+        startNewRound()
         
     }
     
@@ -34,11 +34,26 @@ class ViewController: UIViewController {
         
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
+        
+        startNewRound()
+        
     }
 
     @IBAction func sliderMoved(_ slider: UISlider) {
 //        print("The value of the slider is now: \(slider.value)")
         currentValue = lroundf(slider.value)
+    }
+    
+    func startNewRound() {
+        
+        targetValue = Int.random(in: 1...100)
+//        currentValue = 50
+        slider.value = Float(currentValue)
+        updateLabels()
+    }
+    
+    func updateLabels() {
+        targetLabel.text = String(targetValue)
     }
     
     
