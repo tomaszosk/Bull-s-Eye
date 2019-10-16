@@ -19,13 +19,24 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         startNewRound()
         
     }
     
     @IBAction func showAlert() {
+        
+        var difference = currentValue - targetValue
+//        if currentValue > targetValue {
+//            difference = currentValue - targetValue
+//        } else if targetValue > currentValue {
+//            difference = targetValue - currentValue
+//        } else {
+//            difference = 0
+//        }
+        if difference < 0 {
+            difference *= -1
+        }
         
         let message = "The value of the slider is: \(currentValue)" + "\nThe target value is: \(targetValue)"
         
