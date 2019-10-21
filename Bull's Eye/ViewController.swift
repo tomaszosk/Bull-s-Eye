@@ -10,9 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var currentValue: Int = 0
+    var currentValue = 0
     var targetValue = 0
+    var score = 0
     @IBOutlet weak var targetLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
     
     @IBOutlet weak var slider: UISlider!
     
@@ -26,19 +28,24 @@ class ViewController: UIViewController {
     
     @IBAction func showAlert() {
         
-        var difference = currentValue - targetValue
-//        if currentValue > targetValue {
-//            difference = currentValue - targetValue
-//        } else if targetValue > currentValue {
-//            difference = targetValue - currentValue
-//        } else {
-//            difference = 0
+//        var difference = currentValue - targetValue
+////        if currentValue > targetValue {
+////            difference = currentValue - targetValue
+////        } else if targetValue > currentValue {
+////            difference = targetValue - currentValue
+////        } else {
+////            difference = 0
+////        }
+//        if difference < 0 {
+//            difference *= -1
 //        }
-        if difference < 0 {
-            difference *= -1
-        }
+        let difference = abs(targetValue - currentValue)
+        let points = 100 - difference
+        score += points
         
-        let message = "The value of the slider is: \(currentValue)" + "\nThe target value is: \(targetValue)"
+//        let message = "The value of the slider is: \(currentValue)" + "\nThe target value is: \(targetValue)" + "\nThe difference is: \(difference)"
+        
+        let message = "You scored \(points) points"
         
         let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -65,6 +72,7 @@ class ViewController: UIViewController {
     
     func updateLabels() {
         targetLabel.text = String(targetValue)
+        scoreLabel.text = String(score)
     }
     
     
