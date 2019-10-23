@@ -21,6 +21,7 @@
                                 <state key="normal" title="Start Over"/>
                                 <connections>
                                     <action selector="showAlert" destination="BYZ-38-t0r" eventType="touchUpInside" id="jAE-HH-d6y"/>
+                                    <action selector="startOverButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="TbE-xV-v5W"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0E-kh-z9s">

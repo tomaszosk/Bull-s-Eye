@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        startNewRound()
+        startOverButton()
         
     }
     
@@ -65,12 +65,11 @@ class ViewController: UIViewController {
         let message = "You scored \(points) points"
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let action = UIAlertAction(title: "OK", style: .default, handler: {_ in self.startNewRound()})
         
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
         
-        startNewRound()
         
     }
 
@@ -78,6 +77,18 @@ class ViewController: UIViewController {
 //        print("The value of the slider is now: \(slider.value)")
         currentValue = lroundf(slider.value)
     }
+    
+    
+//    @IBAction func startOverPressed(_ sender: Any) {
+//        startOver()
+//    }
+    
+    @IBAction func startOverButton() {
+        round = 0
+        score = 0
+        startNewRound()
+    }
+    
     
     func startNewRound() {
         
