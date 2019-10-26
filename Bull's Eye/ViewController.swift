@@ -30,17 +30,6 @@ class ViewController: UIViewController {
     
     @IBAction func showAlert() {
         
-//        var difference = currentValue - targetValue
-////        if currentValue > targetValue {
-////            difference = currentValue - targetValue
-////        } else if targetValue > currentValue {
-////            difference = targetValue - currentValue
-////        } else {
-////            difference = 0
-////        }
-//        if difference < 0 {
-//            difference *= -1
-//        }
         let difference = abs(targetValue - currentValue)
         var points = 100 - difference
         
@@ -60,7 +49,6 @@ class ViewController: UIViewController {
         }
         score += points
         
-//        let message = "The value of the slider is: \(currentValue)" + "\nThe target value is: \(targetValue)" + "\nThe difference is: \(difference)"
         
         let message = "You scored \(points) points"
         
@@ -74,14 +62,10 @@ class ViewController: UIViewController {
     }
 
     @IBAction func sliderMoved(_ slider: UISlider) {
-//        print("The value of the slider is now: \(slider.value)")
+
         currentValue = lroundf(slider.value)
     }
     
-    
-//    @IBAction func startOverPressed(_ sender: Any) {
-//        startOver()
-//    }
     
     @IBAction func startOverButton() {
         round = 0
@@ -94,7 +78,6 @@ class ViewController: UIViewController {
         
         round += 1
         targetValue = Int.random(in: 1...100)
-//        currentValue = 50
         slider.value = Float(currentValue)
         updateLabels()
     }
