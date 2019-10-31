@@ -122,6 +122,9 @@
                                 <rect key="frame" x="727" y="332" width="32" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="InfoButton" backgroundImage="SmallButton"/>
+                                <connections>
+                                    <segue destination="b17-Hs-iw8" kind="presentation" modalTransitionStyle="flipHorizontal" id="tnw-Ru-mLR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -143,6 +146,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.60714285714286" y="97.101449275362327"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="Yk5-Lv-WIm">
+            <objects>
+                <viewController id="b17-Hs-iw8" customClass="AboutViewController" customModule="Bull_s_Eye" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b3L-LU-mfK">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dYx-Hg-LHm">
+                                <rect key="frame" x="60" y="40" width="776" height="267"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">*** Bull's Eye ***  Welcome to the game of Bull's Eye where you can win points and fame by dragging a slider.
+
+Your goal is to place the slider as close as possible to the target value. The closer you are, the more points you score. Enjoy!</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWO-17-BSx">
+                                <rect key="frame" x="403" y="315" width="91" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="closeButton:" destination="b17-Hs-iw8" eventType="touchUpInside" id="XjT-r3-Rnt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="q1N-SY-fdL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ob-ts-iNp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="802.90178571428567" y="95.652173913043484"/>
         </scene>
     </scenes>
     <resources>
