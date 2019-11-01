@@ -18,7 +18,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="tFh-Pl-N0v">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d72-7b-7D2">
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d72-7b-7D2">
                                 <rect key="frame" x="105" y="31" width="686" height="352"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6AH-L6-gxf">
@@ -138,7 +138,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="tFh-Pl-N0v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Trw-Fn-hjD"/>
+                            <constraint firstItem="tFh-Pl-N0v" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Trw-Fn-hjD"/>
                             <constraint firstAttribute="trailing" secondItem="tFh-Pl-N0v" secondAttribute="trailing" id="U0T-iv-DZp"/>
                             <constraint firstItem="d72-7b-7D2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bDW-6T-L3Y"/>
                             <constraint firstAttribute="bottom" secondItem="tFh-Pl-N0v" secondAttribute="bottom" id="btI-7K-rls"/>
